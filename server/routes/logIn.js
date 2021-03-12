@@ -13,7 +13,7 @@ router.post('/', async (req, res) => {
         let sql = "SELECT * FROM users_cred WHERE email=$1"
         const { rows } = await client.query(sql, [email])
         client.release()
-        if(rows.length < 0){
+        if(rows.length === 0){
             return res.status(404).json({  message: 'User Not Found' })
         }
         const user = rows[0]
