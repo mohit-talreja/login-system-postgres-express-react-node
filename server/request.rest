@@ -1,0 +1,18 @@
+POST http://localhost:1000/signup
+Content-Type: application/json
+
+{
+    "firstName": "Mohit",
+    "lastName": "Talreja",
+    "email": "talrejamohit15@gmail.com",
+    "password": "Coder@98"
+}
+
+###
+POST http://localhost:1000/login
+Content-Type: application/json
+
+{
+    "email": "talrejamohit15@gmail.com",
+    "password": "Coder@98"
+}
